@@ -48,7 +48,7 @@ const events: TimelineEvent[] = [
   }
 ];
 
-const TimelineItem = ({ event, index }: { event: TimelineEvent, index: number }) => {
+const TimelineItem: React.FC<{ event: TimelineEvent; index: number }> = ({ event, index }) => {
     const [isVisible, setIsVisible] = useState(false);
     const ref = useRef<HTMLDivElement>(null);
 
