@@ -1,0 +1,125 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chicxulub (Chicks Club) - The Asteroid That Killed The Dinosaurs</title>
+    <meta name="description" content="Explore the Chicxulub asteroid impact. If you are searching for 'Chicks Club', you have found the 66-million-year-old crater that changed Earth forever. Interactive 3D models and simulations." />
+    <meta name="keywords" content="Chicxulub, Chicks Club, Chicks Club India, Asteroid, Dinosaurs, K-Pg Extinction, 3D Crater Model, Chicks Club Asteroid" />
+    
+    <!-- Polyfill for process to prevent "ReferenceError: process is not defined" in browser -->
+    <script>
+      window.process = {
+        env: {
+          NODE_ENV: 'production'
+        }
+      };
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              space: {
+                900: '#0f172a',
+                800: '#1e293b',
+                700: '#334155',
+              },
+              impact: {
+                500: '#ef4444',
+                600: '#dc2626',
+              },
+              life: {
+                400: '#4ade80',
+                500: '#22c55e',
+              }
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+            },
+            animation: {
+              'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+              'float': 'float 6s ease-in-out infinite',
+              'shake': 'shake 0.6s cubic-bezier(.36,.07,.19,.97) both',
+            },
+            keyframes: {
+              float: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-20px)' },
+              },
+              shake: {
+                '0%, 100%': { transform: 'translate(0, 0)' },
+                '10%, 90%': { transform: 'translate(-4px, -4px)' },
+                '20%, 80%': { transform: 'translate(4px, 4px)' },
+                '30%, 50%, 70%': { transform: 'translate(-8px, 6px)' },
+                '40%, 60%': { transform: 'translate(8px, -6px)' }
+              }
+            }
+          },
+        },
+      }
+    </script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap');
+      body {
+        font-family: 'Inter', sans-serif;
+        background-color: #0f172a;
+        color: #f8fafc;
+        overflow-x: hidden;
+      }
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #0f172a;
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #334155;
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #475569;
+      }
+    </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Chicxulub Impact Explorer",
+  "alternateName": ["Chicks Club", "Chicks Club Asteroid", "Chicxulub Crater"],
+  "url": "https://chicksclub.in",
+  "description": "Interactive educational resource about the Chicxulub asteroid impact, often searched as Chicks Club.",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://chicksclub.in/?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.555.0",
+    "recharts": "https://aistudiocdn.com/recharts@^3.5.1",
+    "three": "https://aistudiocdn.com/three@^0.181.2",
+    "three/": "https://aistudiocdn.com/three@^0.181.2/",
+    "vite": "https://aistudiocdn.com/vite@^7.2.4",
+    "@vitejs/plugin-react": "https://aistudiocdn.com/@vitejs/plugin-react@^5.1.1"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
